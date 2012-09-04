@@ -70,7 +70,11 @@ function redirectafterregistration_deactivate()
 
 function redirectafterregistration_do()
 {
-	redirect('registration.php');
+	global $lang;
+
+	$lang->load("registeredonreg");
+
+	redirect("redirectafterregistration.php", $lang->redirecting_onreg);
 	exit;
 }
 ?>
