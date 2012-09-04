@@ -59,7 +59,7 @@ function redirectafterregistration_activate()
 </html>',
 		'sid' => -1
 	);
-	$db->insert_query(TABLE_PREFIX."templates", $template);
+	$db->insert_query("templates", $template);
 }
 
 function redirectafterregistration_deactivate()
