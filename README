@@ -1,7 +1,10 @@
 Redirect After Registration for MyBB
-Version Beta 1.0
-StefanT
-http://www.mybbcoder.info
+Version 1.0
+Forked on gihub from StefanT @ http://www.mybbcoder.info
+by
+leefish @ http://www.leefish.nl
 
 -- Installation --
-Just upload the files of the "upload" directory and install the plugin... ;) Then you can modify the template as you like.
+Just upload the files of the "upload" directory to your mybb root and install the plugin... ;) Then you can modify the template as you like. You can view the new page at registration.php and the template to edit is in global templates called redirectafterregistration
+
+Language file for the redirect is in English and will be placed into the english folder on installation. It is just one line, so it is not too hard to make it for your board language.
