@@ -23,8 +23,8 @@ if(!defined('IN_MYBB'))
 {
 	die('This file cannot be accessed directly.');
 }
-
-$plugins->add_hook('member_do_register_end', 'redirectafterregistration_do');
+// add a parameter to the hook so it plays nice with others
+$plugins->add_hook('member_do_register_end', 'redirectafterregistration_do',100);
 
 function redirectafterregistration_info()
 {
@@ -42,7 +42,7 @@ function redirectafterregistration_activate()
 {
 	global $db;
 	$template = array(
-		'title' => 'redirectafterregistration',
+		'title' => 'welcome',
 		'template' => '<html>
 <head>
 <title>{\$mybb->settings[\\\'bbname\\\']} - Welcome!</title>
@@ -65,7 +65,7 @@ function redirectafterregistration_activate()
 function redirectafterregistration_deactivate()
 {
 	global $db;
-	$db->query("DELETE FROM ".TABLE_PREFIX."templates WHERE title='redirectafterregistration'");
+	$db->query("DELETE FROM ".TABLE_PREFIX."templates WHERE title='welcome'");
 }
 
 function redirectafterregistration_do()
